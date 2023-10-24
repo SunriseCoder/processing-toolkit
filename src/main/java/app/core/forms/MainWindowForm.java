@@ -1,6 +1,6 @@
 package app.core.forms;
 
-import app.tools.forms.BrandingForm;
+import app.tools.forms.BrandingFormV1;
 import app.utils.FXUtils;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -9,25 +9,23 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.VBox;
 
-public class WindowForm extends VBox {
+public class MainWindowForm extends VBox {
     @FXML
     private SplitPane splitPane;
 
-    public WindowForm() {
+    public MainWindowForm() {
         FXUtils.loadFXML(this);
     }
 
     @FXML
-    private void openBrandingForm() {
-        openNewTab(new BrandingForm(), "Branding");
+    private void openBrandingFormV1() {
+        openNewTab("Branding v1", new BrandingFormV1());
     }
 
-    private void openNewTab(Node node, String name) {
+    private void openNewTab(String title, Node node) {
         TabPane tabPane = getTabPane();
 
-        Tab tab = new Tab();
-        tab.setText(name);
-        tab.setContent(node);
+        Tab tab = new Tab(title, node);
         tabPane.getTabs().add(tab);
         tabPane.getSelectionModel().select(tab);
     }

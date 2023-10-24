@@ -44,7 +44,7 @@ public class WindowManager {
         stage.setWidth(800);
         stage.setHeight(600);
 
-        WindowForm window = new WindowForm();
+        MainWindowForm window = new MainWindowForm();
         Scene scene = new Scene(window);
         stage.setScene(scene);
         stage.show();
