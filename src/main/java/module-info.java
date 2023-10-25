@@ -4,5 +4,6 @@ module app {
     requires javafx.fxml;
 
     opens app.core.forms to javafx.fxml;
+    opens app.tools.forms to javafx.fxml;
     exports app;
 }

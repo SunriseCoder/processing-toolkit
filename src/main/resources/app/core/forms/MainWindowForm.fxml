@@ -67,7 +67,7 @@
     <ToolBar VBox.vgrow="NEVER">
       <items>
         <Button mnemonicParsing="false" onAction="#openBrandingFormV1">
-          <graphic><FontIcon iconLiteral="bi-calendar2-check" iconSize="16"/></graphic>
+          <graphic><FontIcon iconLiteral="bi-calendar2-check" iconSize="16" /></graphic>
           <tooltip><Tooltip text="Video Branding v1" /></tooltip>
         </Button>
       </items>
